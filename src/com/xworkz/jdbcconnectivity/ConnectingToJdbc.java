@@ -12,8 +12,7 @@ public class ConnectingToJdbc {
 		
 		String sqlQuery = "select * from hotels";
 		
-		 try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hoteldatabase",
-															"root", "root"); 
+		 try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/hoteldatabase","root", "root"); 
 				Statement stmt = conn.createStatement(); // Environment u can execute ur SQL queries
 				ResultSet results = stmt.executeQuery(sqlQuery); //Select stmt
 				){
